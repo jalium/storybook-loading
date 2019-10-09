@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import "./loading.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Loading extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: 0
+    };
+  }
+
+  handleText = evt => {
+    console.log(evt.target.value);
+    this.setState({ time: evt.target.value });
+  };
+
+  startAnimation = () => {};
+
+  render() {
+    return (
+      <div className="app-container">
+        <div class="loader">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+        </div>
+        <p className="inputLabel">Duration de l'animation</p>
+        <input
+          className="textbox"
+          type="text"
+          onChange={this.handleText}
+        ></input>
+        <p className="unit">secondes</p>
+        <button className="btn" onClick={this.startAnimation}>
+          Animer!
+        </button>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Loading;
