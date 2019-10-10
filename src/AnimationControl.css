@@ -1,0 +1,41 @@
+.app-container {
+  text-align: center;
+  margin-top: 250px;
+}
+
+.input-label {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.text-box {
+  text-align: center;
+  width: 35px;
+  height: 25px;
+  border-radius: 3px;
+  outline: 0;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.unit {
+  font-size: 12px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.btn {
+  border: 2px solid black;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 8px;
+  color: black;
+  display: block;
+  margin: 10px auto;
+}
+
+.btn:hover {
+  background-color: #f8b67a;
+  opacity: 0.6;
+}
